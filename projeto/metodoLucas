@@ -1,0 +1,43 @@
+/*
+
+					document.getElementById("imagemWhatsapp").addEventListener("mouseover", hideElement);
+
+ 					document.getElementById("imagemWhatsapp").addEventListener("mouseover", showElement);
+					
+					//var verificacao = false;
+
+					if(e.element.mouseover == 0){
+						function hideElement(){
+						document.getElementById("imagemWhatsapp").style.transition = "all 0.3s";
+						document.getElementById("imagemWhatsapp").style.display = "none";	
+					}
+					}else{						
+						function showElement(){
+						document.getElementById("imagemWhatsapp").style.transition = "all 0.3s";
+						document.getElementById("imagemWhatsapp").style.display = "block";
+					}
+					}
+				
+				document.querySelector("#imagemWhatsapp").addEventListener("mouseover", awesomeFunction);
+
+				const state = {				    
+				    box2: {
+				        isMouseOver: true,
+				    }
+				}
+
+				function awesomeFunction() {
+
+				  console.log(state.box2.isMouseOver);
+				  
+				  if(state.box2.isMouseOver) {
+				    document.querySelector("#textoAlt").style.opacity = "1";
+				    document.querySelector("#imagemWhatsapp").style.opacity = "0";
+				    state.box2.isMouseOver = true;
+				  } else {
+				    document.querySelector("#textoAlt").style.opacity = "0";
+				    document.querySelector("#imagemWhatsapp").style.opacity = "1";
+				    state.box2.isMouseOver = false;
+				  }	  
+				}
+				**/

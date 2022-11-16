@@ -1,0 +1,399 @@
+/* 23:35 01/12/20 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+  background-color: rgba(0,0,0,0.9);
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 36px;
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  {
+	display: none;
+}
+
+::-webkit-scrollbar-track-piece  {
+	background-color: #3b3b3b;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background-color: #666;
+	border-radius: 6px;
+}
+
+.voltar{
+	width: 87px;
+	height: 87px;
+	border-radius: 360px;
+	background-color: rgba(255, 217, 0, 0.7);
+	display: block;
+	position: fixed;
+	right: 3%;
+	bottom: 7%;
+	background-image: url('../img/setacima.png');
+	background-position: center;
+	background-size: 90%;
+	transition: all 0.2s;
+}
+
+.voltar:hover{
+	transition: all 0.2s;background-color: rgba(255, 217, 0, 1);
+}
+
+.area{
+	width: 60%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 14%;
+	padding-top: 2%;
+}
+
+nav{
+   /*background-color: green;*/
+   background-color: rgba(255, 255, 255, 0.1);
+   padding: 1px;
+   display: flex;
+   justify-content: space-between;
+   font-family: 'Raleway';
+   border-radius: 5px;
+}
+
+.a{
+	color: rgb(93, 196, 255);
+}
+
+.liNavDir:hover, .liNavMeio:hover, .liNavEsq:hover{
+	transition: all 0.3s;
+	background-color: rgba(255, 255, 255, 0.884);
+	color: black;
+}
+
+.Linav{
+   color: white;
+   transition: all 0.3s;
+   /*background-color: rgba(255, 255, 255, 0.23);*/
+   padding: 115px;
+   padding-top: 25px;
+   
+   padding-bottom: 25px;
+   border-radius: 5px;
+   font-size: 36px;
+}
+
+.linkNav{
+   color: white;
+}
+
+.centro{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	/*background-color: rgba(0,0,0,0.14);*/
+}
+
+.infinityIMGSimbolo{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 15%;
+}
+
+.tituloCentro{
+	font-size: 48px;
+	margin-top: 0;
+}
+
+.secBackground{
+	font-family: 'INFINITY', sans-serif;
+	background: url('../img/060Opacidade.png');
+	background-size: 100%;
+	height: 768px;
+	background-repeat: no-repeat;
+	/*padding-top: 16%;*/
+	margin-bottom: 260px;
+    height: 860px;
+}
+
+.linha{
+	width: 76%;
+	height: 4px;
+	background-color: white;
+
+	margin-bottom: 50px;
+	float: left;
+}
+.linha2{
+	width: 76%;
+	height: 4px;
+	background-color: white;
+
+	margin-bottom: 50px;
+	float: right;
+}
+
+.quadradoDiv{
+	font-size: 48px;
+	float: left;
+    border: 4px solid white;
+    border-radius: 3px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding: 20px;
+    margin-left: 6.4%;
+    margin-top: -2.3%;
+}
+
+.quadradoDivEsq{
+	font-size: 48px;
+	float: right;
+    border: 4px solid white;
+    border-radius: 3px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding: 20px;
+    margin-right: 6.4%;
+    margin-top: -2.3%;
+}
+
+.clear{
+    clear: left;
+}
+
+.clear2{
+    clear: right;
+}
+
+.backgroundSec1{
+	width: 100%;
+	box-shadow: inset 0 0 0 10000px rgba(43, 80, 142, 0.9);
+}
+
+.fotoArticle{
+    max-width: 500px;
+    background-color: white;
+    margin-right: 10px;
+    margin: 25px;
+    height: fit-content;
+    max-height: 320px;
+    box-shadow: 7px 7px 4px 1px black;
+    /*
+    box-shadow: [horizontal offset] 
+    [vertical offset] 
+    [blur radius] 
+    [optional spread radius] 
+    [color];
+    */
+}
+
+.ocultar{
+	display: none;
+}
+
+.mostrar{
+	display: block;
+}
+
+.secFotos{
+	margin-top: 1.36%;
+	margin-left: auto;
+    width: 91%;
+    margin-right: auto;
+    margin-bottom: 9%;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.scrolldown{
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 5%;
+    width: 450px;
+	transition: 0.5s all;
+}
+
+.quadrado1Contact, .quadrado2Contact{
+	padding: 30px;
+	/*background-color: green;*/
+	border: 2.6px solid white;
+	border-radius: 1px;
+	background-color: rgba(255,255,255,0.05);
+	margin-top: 40px;
+	margin-bottom: 3%;
+	float: left;
+    height: 640px;
+    display: block;
+}
+
+.quadrado1Contact{
+	width: 26%;
+	margin-left: 60px;
+}
+.quadrado2Contact{
+	width: 65%;
+	margin-left: 35px
+}
+
+.descContato{
+    text-align: center;
+}
+
+.flexContact .a{
+	color: white;
+}
+
+.whatsappDiv{
+	background-color: rgb(88, 182, 88);
+    width: 280px;
+    height: 134px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-whatsapp{
+	transition: all 1s ease-in-out;
+	margin-top: 1px;
+	padding-top: 2px;
+	font-size: 124px;
+	text-align: center;
+	margin-bottom: auto;
+
+}
+
+.textoAlt{
+	transition: all 1s ease-in-out;
+	padding-top: 30px;
+	font-size: 28px;
+	text-align: center;
+	display: none;
+}
+
+.displayBlock{
+	display: block
+}
+
+.displayNone{
+	display: none;
+}
+
+li{
+	list-style: none;
+}
+
+.redesSociaisEsquerdoSimbolo{
+    display: block;
+    background-color: rgb(78, 186, 201);
+    width: 150px;
+    height: 150px;
+    margin-top: 34px;
+    margin-left: 35px;
+    margin-right: 37px;
+    float: left;
+}
+
+.redesSociaisDireitoTexto{
+	padding-top: 34px;
+	font-style: italic;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-size: 28px;
+}
+
+p{
+	font-size: 15px;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.obscurecer{
+	display: block;
+	background-color: red;
+}
+@media(min-width: 1366px){
+	 .descContato{
+    	font-size: 28px;
+    }
+	.secBackground{
+		height: 570px;
+		margin-bottom: 260px;
+	}
+	.linha{width:74%}
+	.quadradoDiv{
+		font-size: 34px;
+		margin-top: -3%;
+	}
+	.fotoArticle{
+		max-height: 200px;
+	}
+	.linha2{width:74%}
+	.quadradoDivEsq{
+		font-size: 34px;
+		margin-top: -3%;
+	}
+	.redesSociaisEsquerdoSimbolo{
+    width: 130px;
+    height: 130px;
+}
+
+.redesSociaisDireitoTexto{
+	font-size: 23px;
+}
+}
+@media(min-width: 1440px){
+	.secBackground{
+		height: 900px;
+		margin-bottom: 260px;
+    height: 780px;
+	}
+}
+@media(min-width: 1680px){
+	.secBackground{
+		height: 1050px;
+		margin-bottom: 260px;
+    height: 780px;
+	}
+}
+@media(min-width: 1920px){
+	.secBackground{
+		
+		margin-bottom: 260px;
+   height: 780px;
+	}
+    .descContato{
+    	font-size: 34px;
+    }
+}
+
+/*.parallax
+
+https://www.youtube.com/watch?v=P0IVkSh7AkE
+https://www.verdilac.com/
+
+*/
