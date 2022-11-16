@@ -21,19 +21,61 @@
 	-->
 </head>
 <body>
-<span class="voltar"></span>
+<a href="#home"><span class="voltar"></span></a>
 <main>
    
 	<!----------------------------------------->
-	<div class="backgroundSec1">
+	<div class="backgroundSec1" id="home">
 	<section class="secBackground"> 
+		<span class="icon-menu" id="icon-menu"></span>
 		<div class="area">
-			<nav>
-				<a class="linkNav "><li class="Linav liNavEsq">HOME</li></a>
-				<a class="linkNav"><li class="Linav liNavMeio">TRABALHOS</li></a>
-				<a class="linkNav "> <li class="Linav liNavDir">CONTATO</li></a>
-			</nav>
+			<div class="absoluteNav" id="absoluteNav">
+				<nav>
+					<a class="linkNav" href="#home"><li class="Linav liNavEsq">HOME</li></a>
+					<a class="linkNav" href="#trabalhos"><li class="Linav liNavMeio">TRABALHOS</li></a>
+					<a class="linkNav" href="#contatos"> <li class="Linav liNavDir">CONTATO</li></a>
+					<a class="linkNav"><li class="Linav XMenu" id="XMenu">X</li></a>
+				</nav>
+			</div>			
 		   </div>
+		<script>
+		 if(window.innerWidth < 768){
+			var home = document.querySelector('.liNavEsq');
+			var trabs = document.querySelector('.liNavMeio');
+			var conts = document.querySelector('.liNavDir');
+
+			var iconMenu = document.querySelector('#icon-menu');
+			var XMenu = document.querySelector('#XMenu');
+			var nav = document.querySelector('#absoluteNav');
+			var checker = false;
+
+			
+			iconMenu.addEventListener('click', function(){							
+				nav.classList.add('untranslateY');
+				console.log('add');		
+			})
+			XMenu.addEventListener('click', function(){		
+				nav.classList.remove('untranslateY');
+				console.log('rem');		
+			})
+
+			home.addEventListener('click', function(){		
+				location.href = '#home';					
+				nav.classList.remove('untranslateY');
+				console.log('rem');		
+			})
+			trabs.addEventListener('click', function(){	
+				location.href = '#trabalhos';						
+				nav.classList.remove('untranslateY');
+				console.log('rem');		
+			})
+			conts.addEventListener('click', function(){	
+				location.href = '#contatos';						
+				nav.classList.remove('untranslateY');
+				console.log('rem');		
+			})		
+		}	
+		</script>
 		<!-- colocar background neste section -->
 		<!-- pensar em colocar nav lá em cima -->
 	  <div class="centroGeral">
@@ -48,20 +90,27 @@
 	</div>
 	</section>
 	<!----------------------------------------->
-		<div class="linha"></div>
-		<div class="quadradoDiv">Trabalhos</div>
+		<div class="linha" id="trabalhos"></div>
+		<a href="#trabalhos"><div class="quadradoDiv">Trabalhos</div></a>
 		<div class="clear"></div>
 	<!----------------------------------------->
-	<section class="secFotos">
+	<section class="secFotos">		
+		<span class="viewer">
+			<span class="XViewer">X</span>
+			<h1 class="viewerTitle">Viewer</h1>
+			<div class="imgViewerSquare">
+				<img src="" alt="" class="viewerIMG">
+			</div>
+		</span>
 		<div class="fotos" id="gallery1">
-			<img class="fotoArticle" src="img/work/tat1.png" alt=""></img>
-			<img class="fotoArticle" src="img/work/tat2.png"></img>
-			<img class="fotoArticle" src="img/work/tat3.png"></img>
-			<img class="fotoArticle" src="img/work/tat4.png"></img>
-			<img class="fotoArticle" src="img/work/tat5.png"></img>
-			<img class="fotoArticle" src="img/work/tat6.png"></img>
-			<img class="fotoArticle" src="img/work/tat7.png"></img>
-			<img class="fotoArticle" src="img/work/tat11.png"></img>
+			<img id="0" class="fotoArticle" src="img/work/tat1.png" alt=""></img>
+			<img id="1" class="fotoArticle" src="img/work/tat2.png"></img>
+			<img id="2" class="fotoArticle" src="img/work/tat3.png"></img>
+			<img id="3" class="fotoArticle" src="img/work/tat4.png"></img>
+			<img id="4" class="fotoArticle" src="img/work/tat5.png"></img>
+			<img id="5" class="fotoArticle" src="img/work/tat6.png"></img>
+			<img id="6" class="fotoArticle" src="img/work/tat7.png"></img>
+			<img id="7" class="fotoArticle" src="img/work/tat11.png"></img>
 		</div>
 		<!--<script>
 			jQuery(document).ready(function(){ 
@@ -70,10 +119,58 @@
 				}); 
 			}); 
 		</script>-->
+		<script>
+			var i = 0;
+			var elementoClick = 0;
+			console.log('etapa 0');
+			var viewer = document.querySelector('.viewer');
+			
+			
+			var foto = document.getElementsByClassName('fotoArticle');
+			var XViewer = document.getElementsByClassName('XViewer');
+				XViewer[0].addEventListener('click', sair);
+
+			function sair(){
+				viewer.style.display = 'none';
+				var contagem =+ 1;
+					console.log(' contagemS = '+ contagem);
+			}
+
+
+			for (i; i < 10; i++){
+				foto[i].addEventListener('click', function(evento){
+					elementoClick = evento.target.id;					
+					mostrarFoto();
+				});
+			};
+
+			function mostrarFoto(){
+					viewer.style.opacity = '1';
+					viewer.style.display = 'unset';
+					console.log(viewer.style.display);
+					
+					var fotoSRC = foto[elementoClick].src;
+
+					console.log('EL = '+elementoClick);
+					console.log('foto = ' + foto[elementoClick].src);
+					console.log('fotoSRC = ' + fotoSRC);
+				
+					var img = document.querySelector('.viewerIMG');
+					img.setAttribute('src', fotoSRC);
+
+					
+			}
+			
+
+			
+
+			
+
+		</script>
 	</section>
 	<!----------------------------------------->
-		<div class="linha2"></div>
-		<div class="quadradoDivEsq">Contatos</div>
+		<div class="linha2" id="contatos"></div>
+		<a href="#contatos"><div class="quadradoDivEsq">Contatos</div></a>
 		<div class="clear2"></div>
 	<!----------------------------------------->
 	<section class="secContato">
@@ -81,10 +178,14 @@
 			<div class="quadrado1Contact">
 				<h3 class="descContato">Deseja fazer uma tattoo? Vai no nosso Whatsapp e troca uma ideia com a gente sobre a tattoo ;) Não esquece de dá uma conferida no horario de atendimento também, ok?</h3>
 				
-				<a class="a" href=""><div class="whatsappDiv">
-					<h2 id="textoAlt" class="textoAlt">Clique aqui para ir para o Whatsapp!</h2>
-					<p class="icon-whatsapp"></p>
-				</div></a>
+				
+					<div class="whatsappDiv">
+						<a class="a"  href="https://api.whatsapp.com/send?phone=5584986023731" target="_blank">
+							<h2 id="textoAlt" class="textoAlt">Clique aqui para ir para o Whatsapp!</h2>
+							<p class="icon-whatsapp"></p>
+						</a>
+					</div>
+				
 				
 				
 
@@ -131,16 +232,19 @@
 				
 			</div>
 			<div class="quadrado2Contact">
-				<li class="redesSociaisEsquerdoSimbolo"></li>
-				<li class="redesSociaisDireitoTexto">Mapa</li>				
+				<li class="redesSociaisEsquerdoSimbolo mapa"></li>
+				<li class="redesSociaisDireitoTexto">Mapa</li>
+				<li class="textoRedes"><p>Ficamos localizados na Avenida Lorem ipsum dolor, perto da sit amet consectetur. Para mais informações, considere falar conosco pelo Whatsapp, clicando na imagem logo ao lado do Whatsapp! </p></li>				
 				<div class="clear"></div>
-				<li class="redesSociaisEsquerdoSimbolo"></li>
+				<li class="redesSociaisEsquerdoSimbolo maquina"></li>
 				<li class="redesSociaisDireitoTexto">Tatuador</li>
+				<li class="textoRedes"><p>Nosso tatuador, Lorem ipsum dolor, um dos tatuadores mais conhecidos da região amet consectetur, vai estar pronto para melhor atendê-lo e trazer realidade às suas expectativas.</p></li>				
 				<div class="clear"></div>
-				<li class="redesSociaisEsquerdoSimbolo"></li>
+				<a target="_blank" href="http://instagram.com/mochteweb"><li class="redesSociaisEsquerdoSimbolo instagram"></li></a>
 				<li class="redesSociaisDireitoTexto">Instagram para detalhes</li>
+				<li class="textoRedes"><p>Para mais fotos como estas acima, considere ir até ao nosso instagram clicando na logo do instagram, ou até mesmo <a class="a">aqui</a>.</p></li>				
 				<div class="clear"></div>
-				<p><i>Este website foi desenvolvido por Brenio Filho, da <a class="a" target="_blank" href="http://mochte.onlinewebshop.net">Möchte Webdesigns.</a> Para mais informações, clique <a class="a" target="_blank" href="http://mochte.onlinewebshop.net">aqui</a>, ou no nome da empresa para ser redirecionado</i></p>
+				<p class="autoria"><i>Este website foi desenvolvido por Brenio Filho, da <a class="a" target="_blank" href="http://mochte.onlinewebshop.net">Möchte Webdesigns.</a> Para mais informações, clique <a class="a" target="_blank" href="http://mochte.onlinewebshop.net">aqui</a>, ou no nome da empresa para ser redirecionado</i></p>
 			</div>
 			<div class="clear2"></div>
 

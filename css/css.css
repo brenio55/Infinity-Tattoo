@@ -2,11 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 *{
+  
   box-sizing: border-box;
 }
 
 html{
 	scroll-behavior: smooth;
+}
+
+img{
+	max-width: 100%;
 }
 
 body{
@@ -39,10 +44,9 @@ body{
 	background-color: #666;
 	border-radius: 6px;
 }
-
 .voltar{
-	width: 87px;
-	height: 87px;
+	/*width: 87px;
+	height: 87px;**/
 	border-radius: 360px;
 	background-color: rgba(255, 217, 0, 0.7);
 	display: block;
@@ -54,13 +58,12 @@ body{
 	background-size: 90%;
 	transition: all 0.2s;
 }
-
 .voltar:hover{
 	transition: all 0.2s;background-color: rgba(255, 217, 0, 1);
 }
 
 .area{
-	width: 60%;
+	width: 0%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -70,14 +73,14 @@ body{
 
 nav{
    /*background-color: green;*/
-   background-color: rgba(255, 255, 255, 0.1);
+   
    padding: 1px;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-evenly;
    font-family: 'Raleway';
    border-radius: 5px;
 }
-
+*/
 .a{
 	color: rgb(93, 196, 255);
 }
@@ -91,12 +94,11 @@ nav{
 .Linav{
    color: white;
    transition: all 0.3s;
-   /*background-color: rgba(255, 255, 255, 0.23);*/
+   background-color: rgba(255, 255, 255, 0.13);
    padding: 115px;
    padding-top: 25px;
    
    padding-bottom: 25px;
-   border-radius: 5px;
    font-size: 36px;
 }
 
@@ -127,34 +129,30 @@ nav{
 	font-family: 'INFINITY', sans-serif;
 	background: url('../img/060Opacidade.png');
 	background-size: 100%;
-	height: 768px;
+	/*height: 768px;**/
 	background-repeat: no-repeat;
 	/*padding-top: 16%;*/
 	margin-bottom: 260px;
     height: 860px;
 }
 
-.linha{
+.linha, .linha2{
 	width: 76%;
 	height: 4px;
 	background-color: white;
-
 	margin-bottom: 50px;
+}
+
+.linha{
 	float: left;
 }
 .linha2{
-	width: 76%;
-	height: 4px;
-	background-color: white;
-
-	margin-bottom: 50px;
 	float: right;
 }
 
-.quadradoDiv{
+.quadradoDiv, .quadradoDivEsq{
 	font-size: 48px;
-	float: left;
-    border: 4px solid white;
+	border: 4px solid white;
     border-radius: 3px;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -163,16 +161,13 @@ nav{
     margin-top: -2.3%;
 }
 
+.quadradoDiv{
+	float: left;
+}
+
 .quadradoDivEsq{
-	font-size: 48px;
 	float: right;
-    border: 4px solid white;
-    border-radius: 3px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding: 20px;
-    margin-right: 6.4%;
-    margin-top: -2.3%;
+	margin-right: 6.4%;
 }
 
 .clear{
@@ -189,6 +184,7 @@ nav{
 }
 
 .fotoArticle{
+	padding: 0;
     max-width: 500px;
     background-color: white;
     margin-right: 10px;
@@ -203,6 +199,15 @@ nav{
     [optional spread radius] 
     [color];
     */
+	cursor: pointer;
+	border: 0px solid rgba(255, 217, 0, 1);
+	transition: all 0.06s;
+}
+.fotoArticle:hover{
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgba(255, 217, 0, 1);
+	transition: all 0.1s;
 }
 
 .ocultar{
@@ -233,7 +238,7 @@ nav{
     margin-right: auto;
     display: block;
     padding-top: 5%;
-    width: 450px;
+    /*width: 450px;*/
 	transition: 0.5s all;
 }
 
@@ -260,6 +265,7 @@ nav{
 }
 
 .descContato{
+	margin-top: 65px;
     text-align: center;
 }
 
@@ -269,10 +275,11 @@ nav{
 
 .whatsappDiv{
 	background-color: rgb(88, 182, 88);
-    width: 280px;
+    width: 140px;
     height: 134px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
 }
 
 .icon-whatsapp{
@@ -286,9 +293,11 @@ nav{
 }
 
 .textoAlt{
+	padding-left: 8px;
+	padding-right: 8px;
 	transition: all 1s ease-in-out;
 	padding-top: 30px;
-	font-size: 28px;
+	font-size: 18px;
 	text-align: center;
 	display: none;
 }
@@ -305,6 +314,15 @@ li{
 	list-style: none;
 }
 
+.quadrado2Contact .a{
+	color: rgb(84, 215, 233);
+	transition: all 0.2s;
+}
+.quadrado2Contact .a:hover{
+	color: rgb(112, 255, 255);
+	transition: all 0.2s;
+}
+
 .redesSociaisEsquerdoSimbolo{
     display: block;
     background-color: rgb(78, 186, 201);
@@ -314,6 +332,28 @@ li{
     margin-left: 35px;
     margin-right: 37px;
     float: left;
+}
+.redesSociaisEsquerdoSimbolo.mapa{
+    background-image: url('../img/mapa3.png');
+	background-repeat: no-repeat;
+	background-size: 44%;
+	background-color: unset;
+	width: 150px;
+	height: 150px;
+	background-position: center;
+	margin-top:  15px;
+}
+.redesSociaisEsquerdoSimbolo.maquina{
+    background-image: url('../img/maquina.png');
+}
+.redesSociaisEsquerdoSimbolo.instagram{
+    background-image: url('../img/instagram.png');
+}
+
+.redesSociaisEsquerdoSimbolo.maquina, .redesSociaisEsquerdoSimbolo.instagram{
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: unset;
 }
 
 .redesSociaisDireitoTexto{
@@ -330,19 +370,345 @@ p{
 a{
 	text-decoration: none;
 	cursor: pointer;
+	color: white;
 }
 
 .obscurecer{
 	display: block;
 	background-color: red;
 }
+
+.viewer{
+	z-index: 1000;
+	display: none;
+	position: fixed;
+	width: 80.5%;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: rgba(54, 54, 54, 0.987);
+	height: 640px;
+	box-shadow: 7px 5px 20px 0px black;
+	opacity: 0;
+	transition: opacity 1s ease-in;
+}
+
+.XViewer{
+	padding: 0 10px 0 10px;
+	margin: 0;
+	position: absolute;
+	top: 15px;
+	right: 30px;
+	transition: 0.4s;
+	cursor: pointer;
+	/*border-radius: 50px;
+	border: 0;*/
+}
+.XViewer:hover{
+	transform: rotate(180deg);
+	transition: 0.4s;
+	border-radius: 50px;
+	border: 1px solid white;
+}
+
+.viewerTitle{
+	margin-top: 12px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+
+
+.imgViewerSquare{
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	height: 480px;
+	background-color: rgb(94, 94, 94);
+	box-shadow: 5px 4px 20px 0px black;
+}
+
+.viewerIMG{
+	display: block;
+	height: -webkit-fill-available;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.icon-menu{
+	/*--pixel: 2.5px;
+	--rgba: rgba(255,255,255,0.13); 
+	position: fixed;**/
+	/*top: 9%;
+	left: 0;**/
+	/*
+	padding-top: 1px;
+	padding-left: 30px;
+	padding-right: 20px;
+	background-color: rgba(0,0,0,0.28);
+	border-top: var(--rgba) var(--pixel) solid ;
+	border-right: var(--rgba) var(--pixel) solid;
+	border-bottom: var(--rgba) var(--pixel) solid;**/
+    top: 5%;
+    left: 5%;
+
+	position: fixed;
+	border-radius: 450px;
+    background-color: rgba(255,217,0,0.7);
+    color: black;
+    
+    /*padding-left: 15px;
+    padding-right: 14.3px;
+    padding-top: 11.7px;
+    padding-bottom: 8px;
+	font-size: 23px;**/
+	/*right: 5.86%;
+	bottom: 20%;**/
+
+	padding-left: 9px;
+    padding-right: 8.91px;
+    padding-top: 5.7px;
+    padding-bottom: 3px;
+    font-size: 26px;
+}
+
+[class^="icon-"]:before{
+	line-height: 1.3 !important;
+}
+
+
+
+.untranslateY{
+	transform: translateY(0) !important;
+}
+
+.icon-whatsapp:before {
+    line-height: unset !important;
+}
+
+@media (min-width: 360px){
+	.linha, .linha2{
+		width: 57%;	
+	}
+	.quadradoDiv, .quadradoDivEsq{
+		font-size: 18px;
+		border: 2px solid white;
+		padding: 10px;
+		margin-top: -5.5%;
+	}
+	.scrolldown{
+		padding-top: 22%;
+	}
+	.voltar{
+		width: 50px;
+		height: 50px; 
+		right: 3%;
+		bottom: 5%;
+		background-color: rgba(255,255,255,0.07);
+		background-image: url('../img/setacimaB7.png');
+	}
+	.centroGeral{
+		padding-top: 59%;
+	}
+	.fotoArticle{
+		max-width: 320px;
+	}
+	nav{display: block;
+	padding: unset;
+	}
+	.Linav{
+		padding-left: unset;
+		padding-right: unset;
+		text-align: center;
+		background-color: rgba(0,0,0,0.9);
+		border-bottom: 1px solid white;
+	}
+	.area{
+		width: unset;
+		padding-top: unset;
+		margin-bottom: unset;
+	}
+
+	.secBackground{
+		background-size: cover;
+		background-position: center;
+		height: 475px;
+	}
+	.absoluteNav{
+		z-index: 9000;
+		position: fixed;	
+		height: fit-content;
+		width: 100%;
+		transform: translateY(-100%);
+		transition: all 0.60s;
+	}
+	.XMenu{
+		border-bottom: rgba(255,255,255,0.6) 1px solid;
+	}
+	.voltar:hover{
+		transition: all 0.2s;
+		background-color: rgba(255,255,255,0.1);
+		background-image: url('../img/setacimaB.png');
+	}
+	.descContato {
+		  margin-top: 30px;
+		  font-size: 18px;
+	  }
+	  .quadrado1Contact, .quadrado2Contact {				
+		  width: unset;
+		  margin: 20px 20px 0 20px;
+		  height: 440px;
+	  }
+	  .quadrado2Contact{
+		  height: 1262px;
+	  }
+	  .icon-whatsapp {
+		  margin-top: 42px;
+	  }
+	  .secBackground{
+		margin-bottom: 190px;
+	}
+	.redesSociaisEsquerdoSimbolo {
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+}
+
+@media (min-width: 411px){
+
+}
+
+@media (min-width: 768px) {
+	.redesSociaisEsquerdoSimbolo {
+		margin-left: 35px;
+		margin-right: 37px;
+		float: left;
+	}
+	.secBackground{
+		margin-bottom: 260px;
+	}
+	.icon-whatsapp {
+		  margin-top: 1px;  
+	  }
+	.quadrado1Contact, .quadrado2Contact {		
+		  width: 26%; 
+		  
+		  margin-left: 60px;
+		  height: 640px;		
+		  margin-top: 40px;
+		  margin-bottom: 3%;
+	  }
+	  .quadrado2Contact{
+		margin: 40px auto 3% auto;
+		width: 65%;
+		height: 640px;
+	}
+	.descContato {		
+		  margin-top: 65px;
+		  text-align: center;
+		  font-size: unset;		
+	  }
+	.linha, .linha2{
+		width: 76%;	
+	}
+	.quadradoDiv, .quadradoDivEsq{
+		font-size: 48px;
+		border: 4px solid white;
+		padding: 20px;
+		margin-top: -2.3%;
+	}
+	.voltar:hover{
+		transition: all 0.2s;background-color: rgba(255, 217, 0, 1);
+	}
+	.scrolldown{
+		padding-top: 5%;
+	}
+	.icon-menu{display: none;}
+	.voltar{
+		right: 3%;
+		bottom: 7%;
+		background-color: rgba(255, 217, 0, 0.7);;
+		background-image: url('../img/setacima.png');
+	}
+	.centroGeral{
+		padding-top: unset;
+	}
+	.XMenu{display: none;}
+	nav{
+		padding: 1px;
+	}
+	.secBackground{
+		background-size: cover;
+		height: 860px;
+	}
+	.area{
+		width: 0%;
+		padding-top: 2%;
+		margin-bottom: 14%;
+	}
+	.fotoArticle{
+		max-width: 500px;
+	}
+	.Linav{
+		border-bottom: unset;
+		padding-left: 115px;		
+		padding-right: 115px;		
+		text-align: unset;
+		background-color: rgba(255, 255, 255, 0.13);
+	}
+	.absoluteNav{
+		position: relative;
+		transform: unset;
+	}
+}
+
+@media (min-width: 1024px){
+
+	nav{
+		display: flex;
+	}
+	.area{
+		padding-top: 5%;
+	}
+	.Linav{
+		padding: 65px;
+    	padding-top: 25px;
+    	padding-bottom: 25px;
+	}
+}
+
 @media(min-width: 1366px){
+	.area{
+		padding-top: 2%;
+	}
+	.descContato{
+		padding: 0 0 0 0;
+		margin-top: 45px;
+	}
+	.voltar{
+		width: 50px;
+		height: 50px;
+	}
+	.Linav{
+		font-size: 18px;
+		padding: 115px;
+   		padding-top: 25px;
+   
+   		padding-bottom: 25px;
+	}
+	nav{
+		margin-top: 15px;
+	}
 	 .descContato{
     	font-size: 28px;
     }
 	.secBackground{
-		height: 570px;
+		height: 640px;
 		margin-bottom: 260px;
+		background-size: 100%;
+		background-position: unset;
 	}
 	.linha{width:74%}
 	.quadradoDiv{
@@ -361,34 +727,123 @@ a{
     width: 130px;
     height: 130px;
 }
-
 .redesSociaisDireitoTexto{
 	font-size: 23px;
 }
+.infinityIMGSimbolo{
+	padding-top: unset;
+}
+.centroGeral{
+	margin-top: -3.8%;
+}
+.secBackground{
+	margin-bottom: 260px;
+	height: 560px;
+}
+.scrolldown{
+	padding-top: unset;
+	margin-top: 0.2%;
+	width: 400px;
+}
 }
 @media(min-width: 1440px){
+	.descContato{
+		padding: 0 12px 0 12px;
+	}
+	.Linav{
+		font-size: 20px;
+	}
+	.centroGeral{
+		margin-top: -3.5%;
+	}
+	.infinityIMGSimbolo{
+		padding-top: unset;
+	}
 	.secBackground{
-		height: 900px;
 		margin-bottom: 260px;
-    height: 780px;
+    	height: 570px;
+	}
+	.scrolldown{
+		padding-top: unset;
+		width: 420px;
 	}
 }
 @media(min-width: 1680px){
+	.descContato{
+		padding: 0 36px 0 36px;
+	}
+	.Linav{
+		font-size: 25px;
+	}
 	.secBackground{
-		height: 1050px;
 		margin-bottom: 260px;
-    height: 780px;
+    	height: 570px;
+	}
+	.infinityIMGSimbolo{
+		width: 12%;
+	}
+	.scrolldown{
+		margin-top: -2.5%;
 	}
 }
 @media(min-width: 1920px){
+	.redesSociaisDireitoTexto{
+		font-size: 38px;
+	}
+	.textoRedes p{
+		font-size: 20px;
+	}
+	.redesSociaisEsquerdoSimbolo{
+		width: 160px;
+	}
+	.quadradoDiv, .quadradoDivEsq{
+		margin-top: -2.2%;
+	}
+	.secFotos{
+		padding: 0 12% 0 12%
+	}
+	.fotoArticle{
+		max-height: 220px;
+	}
+	.centroGeral{
+		margin-top: 0;
+	}
+	.voltar{
+		width: 67px;
+		height: 67px;
+		right: 3.5%;
+		bottom: 6.75%;
+	}
+	.Linav{
+		font-size: 30px;
+	}
 	.secBackground{
-		
 		margin-bottom: 260px;
-   height: 780px;
+   		height: 906px;
 	}
     .descContato{
     	font-size: 34px;
     }
+	.scrolldown{
+		margin-top: 9%;
+		width: 23%;
+	}
+	.viewer{
+		height: 900px;
+	}
+	.imgViewerSquare{
+		height: 680px;
+		margin-top: 40px;
+	}
+}
+
+.autoria{
+	font-size: 16px;
+}
+@media(min-width: 1980px){
+	.voltar{
+		right: 5%;
+	}
 }
 
 /*.parallax
